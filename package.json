@@ -1,0 +1,13 @@
+{
+  "name": "hrms-assignment",
+  "version": "1.0.0",
+  "description": "HRMS static dashboard website",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

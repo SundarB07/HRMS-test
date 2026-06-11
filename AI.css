@@ -1,0 +1,298 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#efede8;
+}
+
+header{
+    height:55px;
+    background:#0d2d59;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:0999;
+}
+
+main{
+    flex:1;
+    padding:15px;
+
+    margin-top:55px;
+    margin-left:180px;
+}
+
+.header-icons{
+    display:flex;
+    gap:8px;
+}
+
+.circle{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#1f457a;
+}
+
+.container{
+    display:flex;
+}
+
+.sidebar{
+    width:180px;
+    background:#f4f4f4;
+    min-height:calc(100vh - 55px);
+    padding:15px 0;
+    position:fixed;
+    top:55px;
+    left:0;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px;
+    margin:6px;
+    color:#777;
+    border-radius:8px;
+}
+
+.menu.active{
+    background:#d7e4f5;
+    color:#1d5ca9;
+    font-weight:bold;
+}
+
+.icon{
+    width:24px;
+    height:24px;
+    background:#d0ccc4;
+    border-radius:5px;
+}
+
+main{
+    flex:1;
+    padding:15px;
+}
+
+main h3{
+    color:#777;
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.card{
+    background:white;
+    border:1px solid #ccc;
+    border-radius:8px;
+    text-align:center;
+    padding:10px;
+}
+
+.card h2{
+    color:#0d2d59;
+}
+
+.green{
+    color:#3c7d22 !important;
+}
+
+.orange{
+    color:#9c6214 !important;
+}
+
+.blue{
+    color:#1d5ca9 !important;
+}
+
+.employees{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.emp-card{
+    background:white;
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:15px;
+    position:relative;
+}
+
+.avatar{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#dce7f6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#1d5ca9;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.purple{
+    background:#ece7ff;
+    color:#5f4dcf;
+}
+
+.orange-bg{
+    background:#f6e7d0;
+    color:#a56413;
+}
+
+.status{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    position:absolute;
+    top:-5px;
+    right:-5px;
+}
+
+.green-dot{
+    background:#3d7e18;
+}
+
+.gray-dot{
+    background:#888;
+}
+
+.emp-card p{
+    color:#666;
+}
+
+.emp-card span{
+    color:#888;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f7fa;
+}
+
+th{
+    background:#0d2d59;
+    color:white;
+    padding:12px 16px;
+    text-align:left;
+}
+
+td{
+    padding:12px 16px;
+    border-bottom:1px solid #eef2f5;
+}
+
+table td:first-child {
+    color: #1d5ca9;
+    font-weight: bold;
+}
+
+.badge{
+    background:#e5f0d7;
+    color:#3c7d22;
+    padding:3px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.inactive-badge{
+    background:#e8e6e1;
+    color:#444;
+    padding:3px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* HAMBURGER */
+
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+/* TABLET */
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .header-icons{
+        display:none;
+    }
+
+    .sidebar{
+        position:fixed;
+        top:55px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh - 55px);
+        background:#f4f4f4;
+        padding:15px 0;
+        transition:0.3s;
+        z-index:1000;
+    }
+
+    #menu-toggle:checked ~ .container .sidebar{
+        left:0;
+    }
+
+    main{
+        margin-left:0;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .employees{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+    .employees{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        font-size:12px;
+    }
+}

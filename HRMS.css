@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background: rgb(235, 234, 234);
+}
+
+header{
+    height:52px;
+    background: darkblue;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.icons{
+    display: flex;
+    gap:8px
+}
+
+.circle{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background: lightblue;
+}
+
+.container{
+    display:flex;
+}
+
+aside{
+    width:175px;
+    background:rgb(226, 223, 223);
+    min-height:calc(100vh - 52px);
+}
+
+aside ul{
+    list-style:none;
+    padding:15px 0;
+}
+
+aside li{
+    padding:12px 15px;
+    margin:5px;
+    border-radius:10px;
+    color: grey;
+}
+
+.active{
+    background:lightblue ;
+    color: blue;
+}
+
+main{
+    flex:1;
+    padding:15px;
+}
+
+h3{
+    color:grey;
+    margin-bottom:12px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.card{
+    background: white;
+    border:1px solid rgb(226, 224, 224);
+    border-radius: 10px;
+    text-align: center;
+    padding:10px;
+}
+
+.employee{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.emp-card{
+    background: white;
+    border:1px solid rgb(206, 205, 205);
+    border-radius:10px;
+    padding:10px;
+    position: relative;
+}
+
+.avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background: lightblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-yellow{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:rgb(243, 243, 124);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot-green{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    position:absolute;
+    right:8px;
+    top:8px;
+    background: lightgreen;
+}
+
+.dot-grey{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    position:absolute;
+    right:8px;
+    top:8px;
+    background: grey;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f7fa;
+}
+
+th{
+    background-color: darkblue;
+    color:white;
+    padding:12px 16px;
+    text-align: left;
+}
+
+td{
+    padding:12px 16px;
+    border-bottom: 1px solid #eef2f5;
+}
