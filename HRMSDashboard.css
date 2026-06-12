@@ -81,11 +81,6 @@ main{
     border-radius:5px;
 }
 
-main{
-    flex:1;
-    padding:15px;
-}
-
 main h3{
     color:#777;
     margin-bottom:10px;
@@ -259,8 +254,8 @@ table td:first-child {
         position:fixed;
         top:55px;
         left:-100%;
-        width:100%;
-        height:calc(100vh - 55px);
+        width:40%;
+        height:100%;
         background:#f4f4f4;
         padding:15px 0;
         transition:0.3s;
